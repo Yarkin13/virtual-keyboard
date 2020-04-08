@@ -1,7 +1,7 @@
 const divWrapper = document.createElement('div');
 const textArea = document.createElement('textarea');
 const H1 = document.createElement('h1');
-H1.innerText = 'OS Windows, change language = Shift + Alt';
+H1.innerText = 'OS Windows, change language = Alt + Shift';
 textArea.className = 'input-board';
 textArea.id = 'input-board';
 divWrapper.className = 'wrapper';
