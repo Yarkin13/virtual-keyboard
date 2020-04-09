@@ -444,20 +444,21 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('keypress', (event) => {
   const s = event.key;
-  if (event.key.toUpperCase() === s) {
+  console.log(s);
+  if (event.key.toUpperCase() ===  s && !event.shiftKey) {
     CAPS.classList.add('active-caps');
-  }
+  } else CAPS.classList.remove('active-caps');
 });
 
 
 // Backlight keys
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === !'F12') document.getElementById(event.key.toLowerCase()).classList.add('active-key');
+   document.getElementById(event.key.toLowerCase()).classList.add('active-key');
 });
 
 document.addEventListener('keyup', (event) => {
-  if (event.key === !'F12') document.getElementById(event.key.toLowerCase()).classList.remove('active-key');
+   document.getElementById(event.key.toLowerCase()).classList.remove('active-key');
 });
 
 // CapsLock
